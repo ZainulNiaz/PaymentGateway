@@ -24,7 +24,7 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-  {% if registered %}
+  {% if registered and bool %}
     
   <div class="alert alert-success" role="alert">
     Registration Successful
@@ -32,10 +32,10 @@
 
 {% endif %}
 
-{% if not registered %}
+{% if not registered and bool %}
     
     <div class="alert alert-danger" role="alert">
-      A simple danger alert—check it out!
+    Registration Failed, Email Already exists
     </div>
     
 {% endif %}

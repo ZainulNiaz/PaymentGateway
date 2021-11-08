@@ -41,7 +41,7 @@ class Bank {
             $_SESSION['bankid'] = $rows[0]['accountno'];
      //       var_dump($_SESSION['bankid']);
         }else{
-            echo('failed');
+            // echo('failed');
         }
     }
 
@@ -70,7 +70,7 @@ class Bank {
                 $_SESSION['bankid'] = $rows[0]['accountno'];
            // var_dump($_SESSION['bankid']);
         }else{
-            echo('failed');
+            // echo('failed');
         }
     }
 

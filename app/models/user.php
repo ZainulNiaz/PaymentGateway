@@ -36,7 +36,7 @@ class User {
             $_SESSION['email'] = $email;
            //  var_dump($_SESSION['userid']);
         }else{
-            echo('failed');
+          //  echo('failed');
         }
     }
 

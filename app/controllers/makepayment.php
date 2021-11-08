@@ -21,7 +21,7 @@ class MakePayment {
         $planid = $_POST["planid"];
 
      //   var_dump($planid);
-        var_dump($_SESSION["otp"]);
+       // var_dump($_SESSION["otp"]);
         $isSetAll =  \Controller\Utils::isSetAll( $number, $password, $email, $planid );
 
 

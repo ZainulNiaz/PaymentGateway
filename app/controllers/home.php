@@ -4,7 +4,7 @@ namespace Controller;
 session_start();
 class Home {
     public function get() {
-        \Controller\Utils::renderHome();
+        \Controller\Utils::renderHome(NULL, false);
     }
 
     public function post() {
@@ -15,11 +15,12 @@ class Home {
         $isSetAll = \Controller\Utils::isSetAll($name, $email, $password1);
         if($isSetAll){
             $password = password_hash($password1, PASSWORD_DEFAULT);
-            \Model\General::create($name, $email, $password );
-            \Controller\Utils::renderHome();
+            $registered=\Model\General::create($name, $email, $password );
+
+            \Controller\Utils::renderHome($registered, true);
         }
         else{
-            \Controller\Utils::renderHome();
+            \Controller\Utils::renderHome(NULL, false);
         }
       
     }

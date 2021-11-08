@@ -12,9 +12,10 @@ class General {
         // var_dump($emailexist);
         $stmt = $db->prepare("INSERT INTO users (name , email , password ) VALUES (? ,? , ?)");
         if( !empty($emailexist) ){
-            
+            return false;
         }else{
             $stmt->execute([$name, $email, $password]);
+            return true;
         }
 
         

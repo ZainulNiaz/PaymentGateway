@@ -12,23 +12,6 @@ class User {
         return $rows;
     }
 
-    // public static function get_allbooks(){
-    //     $db = \DB::get_instance();
-    //     $stmt = $db->prepare("SELECT * FROM books where owner = ?");
-    //     $stmt-> execute(["admin"]);
-    //     $rows = $stmt->fetchAll();
-    //     return $rows;
-    // }
-
-    // public static function get_ownedbooks(){
-    //     $db = \DB::get_instance();
-    //     $stmt2 = $db->prepare("SELECT * FROM books WHERE owner = ?");
-    //     $stmt2-> execute([$_SESSION['userid']]);
-    //     $rows = $stmt2->fetchAll();
-
-       
-    //     return $rows;
-    // }
 
     public static function get_all_userdata(){
         $db = \DB::get_instance();

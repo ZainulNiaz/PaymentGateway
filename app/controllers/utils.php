@@ -34,9 +34,9 @@ class Utils {
             )); 
     }
 
-    public static function renderHome(){
+    public static function renderHome($registered, $bool){
         echo \View\Loader::make()->render("templates/home.twig", array(
-           
+           "registered" => $registered,
         ));
     }
 

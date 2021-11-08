@@ -24,35 +24,30 @@
     <label class="form-check-label" for="exampleCheck1">Check me out</label>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
-  {% if alreadyexist %}
-  <p>
-    <em> Email already in use</em>
-  </p>
-  {% endif %}
-  
+  {% if registered %}
+    
+  <div class="alert alert-success" role="alert">
+    Registration Successful
+  </div>
+
+{% endif %}
+
+{% if not registered %}
+    
+    <div class="alert alert-danger" role="alert">
+      A simple danger alert—check it out!
+    </div>
+    
+{% endif %}
+
+
+
+
 </form>
   
 </div>
 
 
-{# <o1>
-  {% for post in posts %}
-  <li>
-    <a href="/post/{{ post.id }}">{{ post.name }}</a>
-    <a href="/post/{{ post.id }}">{{ post.email }}</a>
-    <a href="/post/{{ post.id }}">{{ post.password }}</a>
-  </li>
-  <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-    {{post.id}}
-  </a>
-  <a href="/post/{{ post.id }}" class="list-group-item list-group-item-action">{{ post.name }}</a>
-  <a href="/post/{{ post.id }}" class="list-group-item list-group-item-action">{{ post.email }}</a>
-  <a href="/post/{{ post.id }}" class="list-group-item list-group-item-action">{{ post.password }}</a>
-  </div>
-  {% endfor %} 
-
-</o1> #}
 
 {% endblock %}
 
